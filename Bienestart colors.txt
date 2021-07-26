@@ -1,0 +1,6 @@
+#46cd99 -- Green
+#df6c6c -- Red
+#f5a354 -- Orange
+#bbaefe -- Purple
+#62aced -- Blue
+#93be65 -- Green2

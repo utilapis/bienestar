@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe Page</title>
+  </head>
+  <body>
+    <style>
+      .form-group {
+        display: flex;
+        justify-content: center;
+      }
+      .subscribed {
+        display: flex;
+        justify-content: center;
+      }
+      input {
+        padding: 6px 12px 6px 12px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        font-size: 1em;
+        font-family: "Open Sans", sans-serif;
+        min-width: 250px;
+      }
+      button {
+        margin-left: 10px;
+        padding: 6px 10px 6px 10px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        font-size: 1em;
+        transition-duration: 0.5s;
+        font-family: "Open Sans", sans-serif;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: #46cd99;
+      }
+      button:active {
+        background-color: #53b386;
+      }
+      @media (max-width: 600px) {
+        .form-group {
+          flex-direction: column;
+        }
+        input {
+          width: 100%;
+        }
+        button {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    </style>
+
+    <script>
+      const url = "URL";
+      async function subscribe() {
+        const email = document.getElementById("email").value;
+        document.getElementById("form").style.display = "none";
+        document.getElementById("subscribed").style.display = "flex";
+        
+        await fetch(url, {
+          method: "POST",
+          body: JSON.stringify({ email: email }),
+        });
+      }
+    </script>
+
+    <div id="form" class="form-group">
+      <input id="email" type="email" placeholder="Email address" required />
+      <button onclick="subscribe()">Subscribe</button>
+    </div>
+    <div id="subscribed" class="subscribed" style="display: none">
+      <h2>THANK YOU!</h2>
+    </div>
+  </body>
+</html>

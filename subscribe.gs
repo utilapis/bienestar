@@ -1,9 +1,3 @@
-function doPost(e) {
-  const body = JSON.parse(e.postData.contents);
-  appendEmail(body.email);
-  return ContentService.createTextOutput("Subscribed!");
-}
-
 // Agrega un email al final de la Columna A.
 function appendEmail(email) {
   if (!email) {
@@ -21,4 +15,5 @@ function appendEmail(email) {
     { valueInputOption: "RAW" }
   );
   console.log(result);
+  return HtmlService.createHtmlOutput("Ok");
 }

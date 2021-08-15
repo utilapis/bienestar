@@ -19,3 +19,7 @@ Recursos del sitio Web bienestar.
 ## 5 - Configura los webhooks de PayPal y recibe un email cuando se complete una orden. | UtilAPIs
 - Video: https://youtu.be/xndOFB7gcVg
 - Código: https://github.com/utilapis/webstore/tree/feature/05-ConfiguraWebhooksDePaypal
+
+## 6 - Agrega un pié de página con los links legales. | UtilAPIs
+- Video: https://youtu.be/jZJIq2VvTPU
+- Código: https://github.com/utilapis/webstore/tree/feature/06-AddFooterWithLegalLinks

@@ -23,3 +23,19 @@ Recursos del sitio Web bienestar.
 ## 6 - Agrega un pié de página con los links legales. | UtilAPIs
 - Video: https://youtu.be/jZJIq2VvTPU
 - Código: https://github.com/utilapis/webstore/tree/feature/06-AddFooterWithLegalLinks
+
+## 7 - ¡¡¡Llegaron los mates!!! | UtilAPIs
+- Video: https://youtu.be/Qp2WvgiDYaU
+
+## 8 - Agrega google analytics a tu tienda online. | UtilAPIs
+- Video: https://youtu.be/LJUOYCvPaBA
+
+## 9 - Personaliza la url de tu tienda online. | UtilAPIs
+- Video: https://youtu.be/CTzRkOHRNbw
+
+## 9.1 - Personaliza la url de tu tienda online. Arregalos el redireccionamiento. | UtilAPIs
+- Video: https://youtu.be/NNIJr6YZavA
+
+## 10 - Habilita las credenciales de produccion de Paypal y empieza cobrar realmente. | UtilAPIs
+- Video: https://youtu.be/KsDgPdFnAf8
+- Código: https://github.com/utilapis/webstore/tree/feature/10-ReplacePaypalKeys

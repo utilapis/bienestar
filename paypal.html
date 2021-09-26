@@ -26,6 +26,26 @@
       #confirmation p {
         font-family: "Open Sans", sans-serif;
       }
+
+      .option {
+        margin: 10px;
+        padding: 6px 10px 6px 10px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        font-size: 1em;
+        transition-duration: 0.5s;
+        font-family: "Open Sans", sans-serif;
+      }
+      .option:hover {
+        cursor: pointer;
+        background-color: #46cd99;
+      }
+      .option:active {
+        background-color: #53b386;
+      }
+      .option.selected {
+        background-color: #46cd99;
+      }
     </style>
 
     <div id="confirmation" style="display: none">
@@ -36,12 +56,34 @@
 
     <div id="smart-button-container">
       <div style="text-align: center">
+        <div class="options" style="display: flex; justify-content: center;">
+          <span id="1" class="option selected" onclick="option(1)">1 x 25 AUD</span>
+          <span id="2" class="option" onclick="option(2)">2 x 40 AUD</span>
+        </div>
         <div id="paypal-button-container"></div>
       </div>
     </div>
 
-    <script src="https://www.paypal.com/sdk/js?client-id=AbiU6OORv65YoDkX7HXBD-WbUKHvJqjmgwRNIWmLYe7nIL05MNN2D0Ikl4tf3m3givfHWQ4zyeolI6Q6&enable-funding=venmo&currency=AUD&locale=en_AU&buyer-country=AU" data-sdk-integration-source="button-factory"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AX60GWXBaC1_maiS5VE0Qh8b6TWhn-l6BSp8w3W0DSYny3z-h5DIA2w2kv-V4q5DIg-I_0gPFBqdMJWf&currency=AUD&locale=en_AU" data-sdk-integration-source="button-factory"></script>
     <script>
+      let description = "1 x Insulated Vacuum Mate Cup";
+      let value = 25;
+
+      function option(id) {
+        if(id === 1) {
+          document.getElementById("1").classList.add('selected');
+          document.getElementById("2").classList.remove('selected');
+          description = "1 x Insulated Vacuum Mate Cup";
+          value = 25;
+        }
+        else {
+          document.getElementById("2").classList.add('selected');
+          document.getElementById("1").classList.remove('selected');
+          description = "2 x Insulated Vacuum Mate Cup";
+          value = 40;
+        }
+      }
+
       function initPayPalButton() {
         paypal
           .Buttons({
@@ -57,8 +99,8 @@
               return actions.order.create({
                 purchase_units: [
                   {
-                    description: "Insulated Vacuum Mate Cup",
-                    amount: { currency_code: "AUD", value: 22 },
+                    description: description,
+                    amount: { currency_code: "AUD", value: value },
                   },
                 ],
               });
